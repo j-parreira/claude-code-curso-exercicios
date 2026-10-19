@@ -1,0 +1,29 @@
+[project]
+name = "todo"
+version = "0.1.0"
+description = "A small command-line task tracker, used as the exercise project of a course on LLM coding agents"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+todo = "todo.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12,<0.13"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+# NOTE: exercises/checks/ is left out on purpose; each check is run explicitly per session.
+testpaths = ["tests"]
+
+[tool.ruff.lint.per-file-ignores]
+# Inherited code, kept as it was imported until someone refactors it.
+"src/todo/legacy_import.py" = ["BLE001", "SIM115", "FURB129"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.17.1",
+]

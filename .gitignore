@@ -1,0 +1,12 @@
+.venv/
+dist/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.coverage
+.env
+/.claude/settings.local.json
+/CLAUDE.local.md
+*.pem
+*.key
+*.crt
