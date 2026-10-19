@@ -7,6 +7,7 @@ __pycache__/
 .env
 /.claude/settings.local.json
 /CLAUDE.local.md
+*.code-workspace
 *.pem
 *.key
 *.crt
